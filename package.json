@@ -1,0 +1,38 @@
+{
+  "name": "escrowdapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "truffle compile && truffle migrate --reset",
+    "chain": "ganache-cli --port 8545 --gasPrice 1000000000 -a 20 --gasLimit 7992148 --networkId 999 -e 100000",
+    "test": "truffle test",
+    "test-dai": "truffle test test/2_escrowDAI.test.js",
+    "test-eth": "truffle test test/3_escrowETH.test.js",
+    "test-cron": "truffle test test/4_cronJob.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeVartanian/escrowdapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakeVartanian/escrowdapp/issues"
+  },
+  "homepage": "https://github.com/JakeVartanian/escrowdapp#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.3.0",
+    "dotenv": "^8.1.0",
+    "truffle-hdwallet-provider": "^1.0.16"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "chai-bn": "^0.1.1",
+    "chai-shallow-deep-equal": "^1.4.6",
+    "eth-gas-reporter": "^0.2.10"
+  }
+}
